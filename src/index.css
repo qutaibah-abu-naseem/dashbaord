@@ -33,3 +33,23 @@
     background-color:rgb(75, 159, 255) !important;
     width: 30% !important;
 }
+
+progress {
+  width: 90%;
+  height: 16px;
+}
+
+
+
+#lightprogress::-moz-progress-bar{
+background-color: #000000;
+  border-radius: 8px;
+}
+#signin,#signup{
+  background:linear-gradient(rgb(12, 2, 9),rgb(12, 0, 7));
+}
+
+#billing{
+  background:linear-gradient(rgb(0, 75, 146),rgb(0, 12, 22));
+}
+

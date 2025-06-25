@@ -8,7 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from 'recharts';
-import { api } from '../App';
+import { api } from '../../template/layout';
 
 const data = [
   { name: 'Jan', value: 400 },
@@ -28,7 +28,7 @@ const Chart = () => {
   const tooltipText = isDarkMode ? '#f3f4f6' : '#111';
 
   return (
-    <div className="mt-5 p-4 rounded-xl transition-colors duration-300" style={{ backgroundColor }}>
+    <div className="mt-5 sm:p-4 rounded-xl transition-colors duration-300" style={{ backgroundColor }}>
       <h5 className='text-zinc-900 dark:text-zinc-100'>Sales Overview</h5>
       <p className='text-gray-500 dark:text-gray-200'><span className='text-emerald-700 dark:text-emerald-400'>(+5) more</span>  in 2021</p>
       <div>

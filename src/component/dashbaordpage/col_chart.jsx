@@ -6,7 +6,7 @@ import {
     Tooltip,
     ResponsiveContainer,
 } from 'recharts';
-import { api } from '../App';
+import { api } from '../../template/layout';
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { RiAlignItemLeftFill } from "react-icons/ri";
 import { FaMoneyBill } from 'react-icons/fa';
@@ -85,18 +85,19 @@ const ColChart = () => {
                 <p className='text-gray-500 dark:text-gray-200'><span className='text-emerald-700 dark:text-emerald-400'>(+20)</span>  than last week</p>
 
             </div>
-            <div className='mt-4 flex gap-5 pe-4'>
+            <div className='mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 place-items-center '>
                 {list_col_chart.map(item => (
                     <div className='text-black '>
                         <div className='flex gap-2'>
-                            <div className='w-[25px] h-[25px] flex items-center justify-center px-1 rounded-2 bg-blue-800'>
+                            <div className='w-[20px] h-[20px] flex items-center justify-center px-1 rounded-2 bg-blue-800'>
                                {item.icon}
                             </div>
-                            <p className='text-[20px] mt-[-5px] text-zinc-900 dark:text-zinc-100'>{item.title}</p>
+                            <p className='text-[18px] mt-[-5px] text-zinc-900 dark:text-zinc-100'>{item.title}</p>
                         </div>
-                        <h4 className='mt-[-10px] text-zinc-900 dark:text-zinc-100'>{item.num}</h4>
+                        <h6 className='mt-[-10px] text-zinc-900 dark:text-zinc-100'>{item.num}</h6>
                         <div className='mt-[-17px]'>
                             <progress
+                              id={context.isDarkMode?'darkprogress':'lightprogress'}
                                 value={item.value}
                                 max="100"
                                 className=" h-[4px] w-[70px] rounded overflow-hidden [&::-webkit-progress-bar]:bg-gray-100 [&::-webkit-progress-value]:bg-blue-500"
